@@ -13,9 +13,9 @@ Most of the code is proted from [LCMCore](https://github.com/JuliaRobotics/LCMCo
 
 ## Installation
 
-Clone into home/common-lisp file. Then `asdf:test-system "lcm"`
+Clone into home/common-lisp directory. Then `asdf:test-system "lcm"`
 
-- lcm.lisp file was generated using [SWIG](http://www.swig.org/).
+- lcm.lisp file was generated using [siwg](http://www.swig.org/).
 
 ## Supported Types
 
@@ -36,7 +36,7 @@ Then `:array (size)` keyword would be added for arrays
 
 ### example
 
-`
+```
 (deflcmstruct  example_t
     (timestamp :sint64)
   (position :float64 :array (3)) ;; '(size) or (size)
@@ -45,7 +45,7 @@ Then `:array (size)` keyword would be added for arrays
   (ranges :float64 :array (num_ranges))
   (name :string)
   (enabled :boolean))
-`
+```
 
 ## Usage
 
