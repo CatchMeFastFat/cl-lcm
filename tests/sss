@@ -1,0 +1,52 @@
+(asdf:load-system "lcm")  
+  
+
+  (lcm:deflcmstruct  example_t
+             (x :sint32)
+             (y :string)
+             (z :float64))
+
+(setf x (make-example_t))
+
+;; using LCMCore, StaticArrays
+
+;; mutable struct example_t <: LCMType
+;;   x::Int32
+;;   y::String
+;;   z::Float64
+;; end
+
+  
+;; @lcmtypesetup(example_t)
+
+;; x = example_t(0,"asdasd",1.8)
+
+
+
+
+
+;;   mutable struct matrix_example_t <: LCMType
+;;   rows::Int32
+;;   cols::Int32
+;;   data::Matrix{Float32}
+
+;;   num_points::Int32
+;;   coordinates::Matrix{Float32}
+;; end
+
+;; @lcmtypesetup(matrix_example_t,
+;;   data => (rows, cols),
+;;   coordinates => (3, num_points)
+;; )
+
+  (lcm:deflcmstruct  matrix_example_t
+            (rows :sInt32)
+  (cols :sInt32)  
+  (data :Float32 :array (rows cols)) 
+
+  (num_points :sInt32)
+  (coordinates :Float32 :array (3 num_points)))
+
+(defun x-encoded (x) (let((o (make-array 0 :adjustable t :fill-pointer 0))) (loop for i from 0 below (length x) do
+           (vector-push-extend (aref x (- (1-(length x)) i)) o))
+           o))
