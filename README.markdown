@@ -57,6 +57,7 @@ Tested on SBCL 1.4.10
 
 ## TODO
 
+- [x] test publish
 - [ ] test subscribe
 - [ ] parse .lcm file
 - [ ] benchmark
