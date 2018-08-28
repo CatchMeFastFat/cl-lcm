@@ -22,11 +22,8 @@ Clone into home/common-lisp directory. Then `asdf:test-system "lcm"`
 * :boolean
 * :uint8
 * :sint8
-* :uint16
 * :sint16
-* :uint32
 * :sint32
-* :uint64
 * :sint64
 * :float32
 * :float64
