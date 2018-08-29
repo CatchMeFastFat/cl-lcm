@@ -2,7 +2,7 @@
 
 This is a Common Lisp wrapper of [LCM](https://github.com/lcm-proj/lcm)-C project for message passing and data marshalling.
 
-Most of the code is proted from [LCMCore](https://github.com/JuliaRobotics/LCMCore.jl) julia repo. with the following differences:
+Most of the code is ported from [LCMCore](https://github.com/JuliaRobotics/LCMCore.jl) julia repo. with the following differences:
 
  - hash-table used for storing dimensions, types, and, fingerprints.
  - callback pass function name and message type as strings.
