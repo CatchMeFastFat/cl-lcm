@@ -2,7 +2,7 @@
 
 This is a Common Lisp wrapper of [LCM](https://github.com/lcm-proj/lcm)-C project for message passing and data marshalling.
 
-Most of the code is proted from [LCMCore](https://github.com/JuliaRobotics/LCMCore.jl) julia repo. with the following differences:
+Most of the code is ported from [LCMCore](https://github.com/JuliaRobotics/LCMCore.jl) julia repo. with the following differences:
 
  - hash-table used for storing dimensions, types, and, fingerprints.
  - callback pass function name and message type as strings.
@@ -13,20 +13,17 @@ Most of the code is proted from [LCMCore](https://github.com/JuliaRobotics/LCMCo
 
 ## Installation
 
-Clone into home/common-lisp file. Then `asdf:test-system "lcm"`
+Clone into home/common-lisp directory. Then `asdf:test-system "lcm"`
 
-- lcm.lisp file was generated using [SWIG](http://www.swig.org/).
+- lcm.lisp file was generated using [siwg](http://www.swig.org/).
 
 ## Supported Types
 
 * :boolean
 * :uint8
 * :sint8
-* :uint16
 * :sint16
-* :uint32
 * :sint32
-* :uint64
 * :sint64
 * :float32
 * :float64
@@ -36,7 +33,7 @@ Then `:array (size)` keyword would be added for arrays
 
 ### example
 
-`
+```
 (deflcmstruct  example_t
     (timestamp :sint64)
   (position :float64 :array (3)) ;; '(size) or (size)
@@ -45,7 +42,7 @@ Then `:array (size)` keyword would be added for arrays
   (ranges :float64 :array (num_ranges))
   (name :string)
   (enabled :boolean))
-`
+```
 
 ## Usage
 
@@ -57,6 +54,7 @@ Tested on SBCL 1.4.10
 
 ## TODO
 
+- [x] test publish
 - [ ] test subscribe
 - [ ] parse .lcm file
 - [ ] benchmark
