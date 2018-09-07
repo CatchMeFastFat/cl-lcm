@@ -63,7 +63,7 @@ Tested on SBCL 1.4.10
 
 ## Copyright
 
-Copyright (c) 2018 Islam Omar (io1131@fayoum.edu.eg)
+Copyright (c) 2018 Islam Omar (catchmefastfat@gmail.com)
 
 ## License
 
